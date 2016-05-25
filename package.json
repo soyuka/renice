@@ -1,0 +1,28 @@
+{
+  "name": "renice",
+  "version": "0.0.0",
+  "description": "Change process priority",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soyuka/renice.git"
+  },
+  "keywords": [
+    "nice",
+    "renice",
+    "cpu",
+    "priority"
+  ],
+  "author": "soyuka",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/soyuka/renice/issues"
+  },
+  "homepage": "https://github.com/soyuka/renice#readme",
+  "dependencies": {
+    "promise-spawner": "^1.1.3"
+  }
+}
