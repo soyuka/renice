@@ -22,6 +22,11 @@ const spawner = new Spawner()
 module.exports = function(pid, priority) {
   let cmd
 
+  // https://nodejs.org/api/os.html#os_os_setpriority_pid_priority
+  if (typeof os.setPriority !== 'undefined') {
+    return Promise.resolve(os.setPriority(pid, priority))
+  }
+
   if (os.platform() == 'win32') {
     cmd = `wmic process where processid="${pid}" CALL setpriority ${priority}`
   } else {
