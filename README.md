@@ -13,7 +13,8 @@ npm install renice
 const renice = require('renice')
 
 // pid, priority
-renice(process.pid, 128)
+renice(process.pid, 42)
+.then(() => {}).catch((err) => {})
 ```
 
 For more informations about priorities see https://nodejs.org/api/os.html#os_os_setpriority_pid_priority. Note that on old node versions we'll fallback to `wmic` on windows and `renice` on unix.
